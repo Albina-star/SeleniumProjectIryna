@@ -25,7 +25,6 @@ public class WebTest {
         String url = "http://www.99-bottles-of-beer.net/";
         String expectedResult = "http://www.99-bottles-of-beer.net/";
 
-
         System.setProperty(chromeDriver, driverPath);
      //1. Open Browser:
         WebDriver driver = new ChromeDriver(); // это запуск драйвера
@@ -37,12 +36,10 @@ public class WebTest {
 
         //3. Actual result = Get  web Page URL:
         String actualResult = driver.getCurrentUrl();  //URL after browser opening
-
         //4. Assert  URL:
         Assert.assertEquals(actualResult, expectedResult);
 
         driver.close();
-
         driver.quit();
 
 
